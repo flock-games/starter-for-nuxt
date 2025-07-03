@@ -8,39 +8,38 @@ export default defineNuxtConfig({
       appwriteProjectName: process.env.NUXT_PUBLIC_APPWRITE_PROJECT_NAME,
     },
   },
-  compatibilityDate: '2024-04-03',
+  compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  css: [
-    '@/assets/app.css',
-    '@appwrite.io/pink-icons',
-  ],
+  css: [],
   app: {
     head: {
       meta: [
         { charset: "UTF-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1.0" }
+        { name: "viewport", content: "width=device-width, initial-scale=1.0" },
       ],
       bodyAttrs: {
-        class: 'bg-[#FAFAFB] font-[Inter] text-sm text-[#56565C]',
+        class: "bg-[#FAFAFB] font-[Inter] text-sm text-[#56565C]",
       },
-      title: 'Appwrite + Nuxt',
+      title: "Appwrite + Nuxt",
       htmlAttrs: {
-        lang: 'en',
+        lang: "en",
       },
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/appwrite.svg' },
+        { rel: "icon", type: "image/x-icon", href: "/appwrite.svg" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "anonymous",
+        },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz,wght@14..32,100..900&family=Poppins:wght@300;400&display=swap"
+          href: "https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:opsz,wght@14..32,100..900&family=Poppins:wght@300;400&display=swap",
         },
-      ]
+      ],
     },
   },
   vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
   },
-})
+});

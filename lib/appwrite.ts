@@ -1,6 +1,7 @@
 import { Client, Account, Databases } from "appwrite";
+import type { RuntimeConfig } from "nuxt/schema";
 
-function getAppwrite(config) {
+function getAppwrite(config: RuntimeConfig) {
   const client = new Client()
     .setEndpoint(config.public.appwriteEndpoint)
     .setProject(config.public.appwriteProjectId);
